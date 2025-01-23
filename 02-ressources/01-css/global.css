@@ -1,0 +1,135 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+body{
+    background: #ffffff;
+    height: 100vh;
+}
+
+a{
+    color: #101010;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+/* --- HEADER ------------------------------ */
+
+header{
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 0 20px;
+    border-bottom: 1px solid #101010; /* ! */
+    z-index: 100;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px; 
+    width: 100%;
+    margin: 0 auto;
+}
+
+.navbar a{
+    color: #101010;
+}
+
+.navbar .logo a{
+    font-size: 1.5rem;
+    font-weight: bold;
+
+}
+
+.navbar .logo a:hover{
+    text-decoration: none;
+    color: #FF5757;
+    transition: 150ms;
+}
+
+.navbar .links{
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar .toggle-btn{
+    display: none;
+    color: #101010;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* --- DROPDOWN ------------------------------ */
+
+.dropdown-menu{
+    background: #101010AA;
+    backdrop-filter: blur(20px);
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    top: 70px; 
+    right: 20px;
+    height: 0; 
+    width: 250px;
+    border-radius: 10px;
+    transition: height 0.2 cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 100;
+}
+
+.dropdown-menu a{
+    color: #FFFFFF;
+}
+
+.dropdown-menu.open{
+    height: fit-content;
+    padding: 20px 0px;
+    border: 1px solid #464646;
+}
+
+.dropdown-menu li{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown-menu .action-btn{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+}
+
+/* --- RESPONSIVE ------------------------------ */
+
+@media(max-width: 1250px){
+
+    /* ---- Header ---- */
+
+    .navbar .links, .navbar .action-btn{
+        display: none;
+    }
+
+    .navbar .toggle-btn{
+        display: block;
+    }
+
+    /* ---- Dropdown ---- */
+
+    .dropdown-menu{
+        display: block;
+    }
+}
+
+@media(max-width: 776px){
+
+}
